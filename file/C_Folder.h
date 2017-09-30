@@ -1,5 +1,5 @@
 //批量处理文件夹，文件的类。
-//作者：孙家炜
+
 #pragma once
 #include <windows.h>
 #include <string>

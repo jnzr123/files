@@ -9,7 +9,7 @@ strFolderPath：				文件夹路径
 strFilter：					过滤器，只有后缀（比如".txt"或者"mydoc.txt"）等于strFilter的才筛选出来
 isRecursion:				是否考虑子文件夹
 返回：						所有满足需求的文档的路径和文档名称。注意，必须使用deleteFilesInFolder来释放返回的内存。
-//by 孙家炜
+
 -------------------------------------------------------------------------------------------------*/
 vector<FilesInFolder>* C_Folder::getFileFromFolder(string* strFolderPath, string* strFilter, bool isRecursion)
 {
@@ -25,7 +25,7 @@ strFolderPath：				文件夹路径
 strFilter：					过滤器，只有后缀（比如".txt"或者"mydoc.txt"）等于strFilter的才筛选出来
 isRecursion:				是否考虑子文件夹
 vt_FIF:						输出项所有满足需求的文档的路径和文档名称。
-//by 孙家炜
+
 -------------------------------------------------------------------------------------------------*/
 void C_Folder::getFileFromFolder_faster(string* strFolderPath, string* strFilter, bool isRecursion, vector<FilesInFolder>& vt_FIF)
 {
@@ -35,7 +35,7 @@ void C_Folder::getFileFromFolder_faster(string* strFolderPath, string* strFilter
 /*-------------------------------------------------------------------------------------------------
 功能：					删除结构体FilesInFolder所暂用的空间
 vt_FIF：				需要删除的FilesInFolder内存指针
-//by 孙家炜
+
 -------------------------------------------------------------------------------------------------*/
 void C_Folder::deleteFilesInFolder(vector<FilesInFolder>* vt_FIF)
 {	
@@ -50,7 +50,7 @@ void C_Folder::deleteFilesInFolder(vector<FilesInFolder>* vt_FIF)
 strFolderPath：				需要遍历的文件夹路径
 isRecursion：				是否递归获取子文件夹中的子文件夹
 返回：						strFolderPath路径中的子文件夹
-//by 孙家炜
+
 -------------------------------------------------------------------------------------------------*/
 vector<string> C_Folder::getFolder(string strFolderPath, bool isRecursion)
 {
@@ -67,7 +67,7 @@ strFilter：					过滤器，只有后缀（比如".txt"或者"mydoc.txt"）等于strFilter的才筛
 vt_FIF：					本次获取的文件信息，递归用，下一次递归操作时，会将正确的信息放到此变量中
 isRecursion:				是否递归考虑子文件夹
 返回：						所有满足需求的文档的路径和文档名称
-//by 孙家炜
+
 -------------------------------------------------------------------------------------------------*/
 vector<FilesInFolder> C_Folder::scanFolder(string strFolderPath, string strFilter, vector<FilesInFolder> vt_FIF, bool isRecursion)
 {
@@ -123,7 +123,7 @@ strFilter：					过滤器，只有后缀（比如".txt"或者"mydoc.txt"）等于strFilter的才筛
 vt_FIF：					本次获取的文件信息，递归用，下一次递归操作时，会将正确的信息放到此变量中
 isRecursion:				是否递归考虑子文件夹
 返回：						所有满足需求的文档的路径和文档名称
-//by 孙家炜
+
 -------------------------------------------------------------------------------------------------*/
 void C_Folder::scanFolder_faster(string strFolderPath, string strFilter, vector<FilesInFolder>& vt_FIF, bool isRecursion)
 {
@@ -171,7 +171,7 @@ strFolderPath：				文件夹路径
 vt_folderName：				本次获取的文件夹信息，递归用，下一次递归操作时，会将正确的信息放到此变量中	
 isRecursion：				是否递归考虑子文件夹
 返回：						所有满足需求的文件夹
-//by 孙家炜
+
 -------------------------------------------------------------------------------------------------*/
 vector<string> C_Folder::scanFolder(string strFolderPath, vector<string> vt_folderName, bool isRecursion)
 {
@@ -214,7 +214,7 @@ vector<string> C_Folder::scanFolder(string strFolderPath, vector<string> vt_fold
 str1：						字符串1
 str2：						字符串2	
 返回：						是否相同
-//by 孙家炜
+
 -------------------------------------------------------------------------------------------------*/
 bool C_Folder::compareFilter(string str1, string str2)
 {
@@ -230,7 +230,7 @@ bool C_Folder::compareFilter(string str1, string str2)
 }
 
 //根据图片路径"D:\Test\2012-04-23_09-02-08_002_DO.jpg"，返回"2012-04-23_09-02-08_002_DO"
-//by 孙家炜
+
 string C_Folder::getFileNameFromPath(string filePath, bool isNeedFormat)
 {
 	int i1 = filePath.rfind("\\");
@@ -245,7 +245,7 @@ string C_Folder::getFileNameFromPath(string filePath, bool isNeedFormat)
 }
 
 //根据文件路径"D:\Test\2012-04-23_09-02-08_002_DO.jpg"，返回"Test"
-//by 孙家炜
+
 string C_Folder::getFolderNameFromPath(string filePath)
 {	
 	string str = filePath.substr(0, filePath.rfind("\\"));
@@ -254,7 +254,7 @@ string C_Folder::getFolderNameFromPath(string filePath)
 }
 
 //判断文件是否存在
-//by 孙家炜
+
 bool C_Folder::isFileExist(string path)
 {
 	bool isExist = false;
@@ -271,7 +271,7 @@ bool C_Folder::isFileExist(string path)
 }
 
 //判断文件夹是否存在，不存在则新建。
-//by 孙家炜
+
 bool C_Folder::isFoldeExist(char* folderPath, bool isCreate)
 {
 	bool isExist = false;
@@ -297,7 +297,7 @@ str_src：					源文件夹路径
 str_dst：					目的文件夹路径
 isRecursion：				是否递归
 返回：						复制的文件夹数量
-by 孙家炜
+
 -------------------------------------------------------------------------------------------------*/
 int C_Folder::creatFolder(string str_src, string str_dst, bool isRecursion)
 {

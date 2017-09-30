@@ -1,6 +1,5 @@
 //功能：		处理文件夹，文件的类。
-//作者：		孙家炜
-//创建日期：	2016-01-01
+
 #pragma once
 #include <string>
 #include <vector>
